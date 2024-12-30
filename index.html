@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Zapatillas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">ZapaShop</a>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="#">Inicio</a>
+            <a href="./productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <div class="navbar-cart" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+                <!-- Contenedor desplegable del carrito -->
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div id="cart-items"></div>
+                    <div id="cart-total"></div>
+                    <button onclick="goToCart()">Ver carrito completo</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+   
+    <header class="header">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <a href="./productos.html">
+                    <img src="./img/NIKE/Nike panda.webp" alt="NIKE PANDA">
+                    <div class="carousel-info">
+                        <h3>NIKE PANDA</h3>
+                        <p>$200</p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-slide">
+                <a href="./productos.html">
+                    <img src="./img/Carrosusel/Carrusel-adidas-campus00.webp" alt="CAMPUS 00">
+                    <div class="carousel-info">
+                        <h3>ADIDAS CAMPUS 00s</h3>
+                        <p>$179</p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-slide">
+                <a href="./productos.html">
+                    <img src="./img/Carrosusel/Carrusel-puma-xl.jpeg" alt="PUMA SUEDE XL">
+                    <div class="carousel-info">
+                        <h3>PUMA SUEDE XL</h3>
+                        <p>$175</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </header>
+
+    
+    <section class="weekly-offers">
+        <h2>Ofertas de la Semana</h2>
+        <div class="offer-list">
+            <div class="offer-item">
+                <img src="./img/VANS/KNU.jpg" alt="Oferta 1">
+                <h4>VANS KNU OLD SCHOOL</h4>
+                <p><span class="old-price">$180</span> <p>$150</p></p>
+                <select class="talle-select" data-product="Nike Air">
+                    <option value="" disabled selected>Elegir talle</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                </select>
+                <button class="btn-add-to-cart" onclick="addToCart('Zapatilla Reebok Classic', 6500)">Agregar al carrito</button>
+            </div>
+            <div class="offer-item">
+                <img src="./img/PUMA/Buggy el payaso.jpg" alt="Oferta 2">
+                <h4>PUMA BUGGY PAYASO</h4>
+                <p><span class="old-price">$210</span> <p>$199</p></p>
+                <select class="talle-select" data-product="Nike Air">
+                    <option value="" disabled selected>Elegir talle</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                </select>
+                <button class="btn-add-to-cart" onclick="addToCart('Zapatilla Converse All Star', 7200)">Agregar al carrito</button>
+            </div>
+            <div class="offer-item">
+                <img src="./img/ADIDAS/Campus 80s.avif" alt="Oferta 3">
+                <h4>ADIDAS CAMPUS 80s</h4>
+                <p><span class="old-price">$196</span> <p>$179</p></p>
+                <select class="talle-select" data-product="Nike Air">
+                    <option value="" disabled selected>Elegir talle</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                </select>
+                <button class="btn-add-to-cart" onclick="addToCart('Zapatilla New Balance 574', 8000)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="brands-menu">
+        <h2>Explorar por Marcas</h2>
+        <ul>
+            <li><a href="productos.html?marca=nike">Nike</a></li>
+            <li><a href="productos.html?marca=adidas">Adidas</a></li>
+            <li><a href="productos.html?marca=puma">Puma</a></li>
+            <li><a href="productos.html?marca=reebok">Reebok</a></li>
+            <li><a href="productos.html?marca=converse">Converse</a></li>
+        </ul>
+    </section>
+    
+
+   
+   
+<footer class="footer">
+    <div class="footer-info">
+        <div class="footer-item">
+            <h4>Horarios</h4>
+            <p>Lunes a Sábados: 9:00 - 20:00</p>
+        </div>
+        <div class="footer-item">
+            <h4>Dirección</h4>
+            <p>Alberdi 7100, CABA</p>
+        </div>
+        <div class="footer-item">
+            <h4>Teléfonos</h4>
+            <p>(011) 3434-5678</p>
+            <p>(011) 5565-4311</p>
+        </div>
+        <div class="footer-item">
+            <h4>Redes Sociales</h4>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+        </ul>
+    </div>
+</footer>
+
+   
+   
+   
+   
+    <script src="javascript.js"></script>
+</body>
+</html>
+
+ 
+ 

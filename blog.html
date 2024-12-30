@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style/style.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">ZapaShop</a>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <div class="navbar-cart" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+                
+                <div id="cart-dropdown" style="display: none;">
+                    <h3>Carrito</h3>
+                    <div id="cart-items"></div>
+                    <p id="cart-total">Total: $0</p>
+                    <button onclick="goToCart()">Ver carrito completo</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="blog-header">
+        <h1>Noticias</h1>
+    </header>
+    <main class="blog-main">
+        <section class="blog-grid">
+       
+            <div class="blog-card" onclick="openPost('noticia1.html')">
+                <img src="./img/noticias/snkrs-showcase-horizontal.webp" alt="Zapatillas 2024">
+                <h2>Las mejores zapatillas del 2024</h2>
+                <p>Descubre cuáles son las zapatillas que marcarontendencia en el 2024. Innovación, estilo y tecnología se combinan para ofrecer lo mejor.</p>
+            </div>
+    
+            
+            <div class="blog-card" onclick="openPost('noticia2.html')">
+                <img src="./img/noticias/noticia 2.avif" alt="Moda 2024">
+                <h2>Moda 2024: Colores y estilos imperdibles</h2>
+                <p>Explora los colores y estilos que dominarán las pasarelas y la moda urbana para el 2025. Prepárate para renovar tu guardarropa.</p>
+            </div>
+    
+            
+            <div class="blog-card" onclick="openPost('noticia3.html')">
+                <img src="./img/noticias/noticia 3.webp" alt="Tecnología 2024">
+                <h2>Top 5 innovaciones tecnológicas del 2024</h2>
+                <p>Un vistazo a los avances tecnológicos más esperados del año. Desde inteligencia artificial hasta gadgets imprescindibles.</p>
+            </div>
+    
+            
+            <div class="blog-card" onclick="openPost('noticia4.html')">
+                <img src="./img/noticias/noticia 4.webp" alt="Viajes 2024">
+                <h2>Deporte y zapatillas</h2>
+                <p>Conoce las proximas novedades de las proximas zapatillas del mundo del deporte</p>
+            </div>
+        </section>
+    </main>
+    
+    
+
+
+    
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-item">
+                <h4>Horarios</h4>
+                <p>Lunes a Sábados: 9:00 - 20:00</p>
+            </div>
+            <div class="footer-item">
+                <h4>Dirección</h4>
+                <p>Alberdi 7100, CABA</p>
+            </div>
+            <div class="footer-item">
+                <h4>Teléfonos</h4>
+                <p>(011) 3434-5678</p>
+                <p>(011) 5565-4311</p>
+            </div>
+            <div class="footer-item">
+                <h4>Redes Sociales</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function openPost(url) {
+            window.location.href = url;
+        }
+    </script>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

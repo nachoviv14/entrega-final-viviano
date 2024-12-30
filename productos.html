@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - ZapaShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">ZapaShop</a>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <div class="navbar-cart" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            
+                <div id="cart-dropdown" style="display: none;">
+                    <h3>Carrito</h3>
+                    <div id="cart-items"></div>
+                    <p id="cart-total">Total: $0</p>
+                    <button onclick="goToCart()">Ver carrito completo</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    
+    
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Buscar productos..." />
+        <button class="search-btn">Buscar</button>
+    </div>
+    <section class="price-info">
+        <h3 class="price-notice">Todos los precios están expresados en USD.</h3>
+    </section>
+    
+    <div class="product-page">
+        <aside class="filter">
+            <h3>Filtros</h3>
+            <div class="filter-section">
+                <h4>Marca</h4>
+                <label><input type="checkbox" value="NIKE" class="filter-input" data-filter="brand"> Nike</label><br>
+                <label><input type="checkbox" value="ADIDAS" class="filter-input" data-filter="brand"> Adidas</label><br>
+                <label><input type="checkbox" value="PUMA" class="filter-input" data-filter="brand"> Puma</label><br>
+            </div>
+            <div class="filter-section">
+                <h4>Talles</h4>
+                <label><input type="checkbox" value="36" class="filter-input" data-filter="size"> 36</label><br>
+                <label><input type="checkbox" value="37" class="filter-input" data-filter="size"> 37</label><br>
+                <label><input type="checkbox" value="38" class="filter-input" data-filter="size"> 38</label><br>
+            </div>
+        </aside>
+        
+        
+
+    
+        <section class="product-list">
+            <h2>Productos</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="./img/NIKE/Nike panda.webp" alt="Zapatilla Nike Air">
+                    <h4>NIKE PANDA</h4>
+                    <p>$200</p>
+                    <select class="talle-select" data-product="Nike Air">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/NIKE/Vaporfly 3.webp" alt="Zapatilla Air Jordan">
+                    <h4>NIKE VAPORFLY</h4>
+                    <p>$340</p>
+                    <select class="talle-select" data-product="Nike Vaporfly">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/NIKE/Low retro.webp" alt="Zapatilla Jordan Retro">
+                    <h4>NIKE LOW RETRO 00s</h4>
+                    <p>$230</p>
+                    <select class="talle-select" data-product="LOW RETRO">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/NIKE/Air jordan retro high.webp" alt="Zapatilla Nike Max">
+                    <h4>AIR JORDAN HIGH</h4>
+                    <p>$350</p>
+                    <select class="talle-select" data-product="AIR JORDAN RETRO HIGH">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/NIKE/Air max 97.webp" alt="Air max 97">
+                    <h4>NIKE AIR MAX 97</h4>
+                    <p>$199</p>
+                    <select class="talle-select" data-product="Nike Air max 97">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="./img/NIKE/Low retro violeta.webp" alt="Nike low retro">
+                    <h4>NIKE LOW RETRO</h4>
+                    <p>$200</p>
+                    <select class="talle-select" data-product="Nike Low retro">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/NIKE/Low retro turquesa.webp" alt="Nike low retro">
+                    <h4>NIKE LOW RETRO</h4>
+                    <p>$200</p>
+                    <select class="talle-select" data-product="Nike low retro">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/VANS/KNU.jpg" alt="VANS KNU OLD SCHOOL">
+                    <h4>VANS KNU OLD</h4>
+                    <p>$150</p>
+                    <select class="talle-select" data-product="Vans knu old">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+               
+                <div class="product-card">
+                    <img src="./img/VANS/KNU Blue.jpg" alt="Zapatilla Nike Max">
+                    <h4>VANS KNU OLD</h4>
+                    <p>$150</p>
+                    <select class="talle-select" data-product="Vans knu old">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/VANS/Old School.jpg" alt="VANS OLD SCHOOL">
+                    <h4>VANS OLD SCHOOL</h4>
+                    <p>$120</p>
+                    <select class="talle-select" data-product="Vans old school">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="./img/PUMA/Suede XL.jpg" alt="PUMA SUEDE XL">
+                    <h4>PUMA SUEDE XL</h4>
+                    <p>$175</p>
+                    <select class="talle-select" data-product="Vans old school">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+               
+                <div class="product-card">
+                    <img src="./img/PUMA/One pice.jpg" alt="Puma one piece">
+                    <h4>PUMA ONE PIECE</h4>
+                    <p>$125</p>
+                    <select class="talle-select" data-product="Vans old school">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/PUMA/Buggy el payaso.jpg" alt="Zapatilla Jordan Retro">
+                    <h4>PUMA BUGGY PAYASO</h4>
+                    <p>$199</p>
+                    <select class="talle-select" data-product="Vans old school">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/PUMA/Player lane.jpg" alt="PUMA PLAYER LANE">
+                    <h4>PUMA PLAYER LANE</h4>
+                    <p>$180</p>
+                    <select class="talle-select" data-product="Player lane">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Campus 00 1.avif" alt="ADIDAS CAMPUES 00">
+                    <h4>ADIDAS CAMPUS 00</h4>
+                    <p>$179</p>
+                    <select class="talle-select" data-product="Player lane">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Campus 00 red CL.avif" alt="ADIDAS CAMPUS RED">
+                    <h4>ADIDAS CAMPUS RED</h4>
+                    <p>$179</p>
+                    <select class="talle-select" data-product="campus red">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+            
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Campus 00.avif" alt="ADIDAS CAMPUS 00">
+                    <h4>ADIDAS CAMPUS 00</h4>
+                    <p>$179</p>
+                    <select class="talle-select" data-product="Campus 00">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+               
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Campus 80s.avif" alt="ADIDAS CAMPUS 80s">
+                    <h4>ADIDAS CAMPUS 80s</h4>
+                    <p>$199</p>
+                    <select class="talle-select" data-product="Campus 00">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Campus Black.avif" alt="ADIDAS CAMPUS 00">
+                    <h4>ADIDAS CAMPUS 00</h4>
+                    <p>$179</p>
+                    <select class="talle-select" data-product="Campus 00">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Campus Vulc.avif" alt="ADIDAS CAMPUS VULC">
+                    <h4>ADIDAS CAMPUS VULC</h4>
+                    <p>$160</p>
+                    <select class="talle-select" data-product="Campus 00">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Galleze negras.avif" alt="ADIDAS GALLEZE">
+                    <h4>ADIDAS GALLEZE</h4>
+                    <p>$145</p>
+                    <select class="talle-select" data-product="Adidas galleze">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+            
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Galleze verdes.avif" alt="ADIDAS GALLEZE">
+                    <h4>ADIDAS GALLEZE</h4>
+                    <p>$240</p>
+                    <select class="talle-select" data-product="Adidas galleze">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Rivaldy low white.avif" alt="ADIDAS RIVARLDY LOW">
+                    <h4>ADIDAS RIVALDY LOW</h4>
+                    <p>$340</p>
+                    <select class="talle-select" data-product="Adidas rivaldy low">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="./img/ADIDAS/Gazelle indoor.avif" alt="ADIDAS GALLEZE">
+                    <h4>ADIDAS GALLEZE</h4>
+                    <p>$180</p>
+                    <select class="talle-select" data-product="Adidas galleze">
+                        <option value="" disabled selected>Elegir talle</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+                
+             
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-item">
+                <h4>Horarios</h4>
+                <p>Lunes a Sábados: 9:00 - 20:00</p>
+            </div>
+            <div class="footer-item">
+                <h4>Dirección</h4>
+                <p>Alberdi 7100, CABA</p>
+            </div>
+            <div class="footer-item">
+                <h4>Teléfonos</h4>
+                <p>(011) 3434-5678</p>
+                <p>(011) 5565-4311</p>
+            </div>
+            <div class="footer-item">
+                <h4>Redes Sociales</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+    <script src="buscador.js"></script>
+    <script src="filtro.js"></script>
+</body>
+</html>

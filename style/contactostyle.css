@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #533f84;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label {
+    font-size: 14px;
+    color: #ccc;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #533f84;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}
+
+#contact-form button {
+    background-color: #533f84;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: #40267b;
+}
+
+#whatsapp-contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#whatsapp-contact a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #25d366;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+#whatsapp-contact a:hover {
+    text-decoration: underline;
+}
+
+#whatsapp-contact i {
+    font-size: 24px;
+}
+
+
+
+
